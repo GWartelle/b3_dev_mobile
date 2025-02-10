@@ -1,0 +1,33 @@
+# Flutter/Dart
+.dart_tool/
+.packages
+.pub-cache/
+build/
+.flutter-plugins
+.flutter-plugins-dependencies
+.flutter-versions
+
+# Android
+android/.gradle/
+android/app/build/
+android/key.jks  # If using a keystore for signing (don't expose this!)
+
+# iOS
+ios/Pods/
+ios/.symlinks/
+ios/Flutter/Flutter.podspec
+ios/Flutter/Generated.xcconfig
+ios/Flutter/App.framework
+
+# VS Code
+.vscode/
+
+# JetBrains (Android Studio, IntelliJ)
+.idea/
+*.iml
+
+# macOS
+*.DS_Store
+
+# Logs & Debugging
+*.log
