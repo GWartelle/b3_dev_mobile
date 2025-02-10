@@ -10,6 +10,12 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(home: InteractivePage());
+    return MaterialApp(
+        title: 'B3 Interactive UI',
+        theme: ThemeData(
+          primarySwatch: Colors.blue,
+          scaffoldBackgroundColor: Colors.white,
+        ),
+        home: InteractivePage());
   }
 }
