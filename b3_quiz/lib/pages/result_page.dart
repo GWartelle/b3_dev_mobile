@@ -45,7 +45,7 @@ class ResultPage extends StatelessWidget {
                       Image.network(
                           'https://images.unsplash.com/photo-1531327431456-837da4b1d562?q=80&w=928&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'),
                       Text(
-                        "You're total is $finalScore/$totalQuestions",
+                        "You're total score is $finalScore/$totalQuestions",
                         style: TextStyle(
                           fontWeight: FontWeight.bold,
                           fontSize: 20,
