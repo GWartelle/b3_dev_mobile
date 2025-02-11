@@ -7,11 +7,12 @@ class QuestionCard extends StatelessWidget {
   final VoidCallback onFalsePressed;
 
   const QuestionCard({
+    Key? key,
     required this.questionText,
     required this.imagePath,
     required this.onTruePressed,
     required this.onFalsePressed,
-  });
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

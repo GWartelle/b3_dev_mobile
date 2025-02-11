@@ -2,14 +2,15 @@ import 'package:flutter/material.dart';
 
 class ScoreBar extends StatelessWidget implements PreferredSizeWidget {
   final int currentScore;
-  final int questionNumber;
+  final int currentQuestionIndex;
   final int totalQuestions;
 
   const ScoreBar({
+    Key? key,
     required this.currentScore,
-    required this.questionNumber,
+    required this.currentQuestionIndex,
     required this.totalQuestions,
-  });
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +18,7 @@ class ScoreBar extends StatelessWidget implements PreferredSizeWidget {
       title: Column(
         children: [
           Text(
-            "Question number $questionNumber/$totalQuestions",
+            "Question number $currentQuestionIndex/$totalQuestions",
             style: TextStyle(
               color: Colors.white,
               fontWeight: FontWeight.bold,
