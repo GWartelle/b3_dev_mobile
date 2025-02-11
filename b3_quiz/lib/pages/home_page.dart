@@ -41,7 +41,7 @@ class HomePage extends StatelessWidget {
                           child: ClipRRect(
                             borderRadius: BorderRadius.circular(14),
                             child: Image.network(
-                              'https://images.unsplash.com/photo-1517258307935-9764dad5d7de?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+                              'https://images.unsplash.com/photo-1543513960-bd9fe93f4fd9?q=80&w=1965&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
                               fit: BoxFit.cover,
                               loadingBuilder:
                                   (context, child, loadingProgress) {

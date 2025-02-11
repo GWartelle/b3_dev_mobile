@@ -13,6 +13,11 @@ class ResultPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    double averageScore = totalQuestions / 2;
+    String imageUrl = finalScore >= averageScore
+        ? 'https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExNGg0c3plYTRvbG90MjJ6YnpicTNnYWVoZzNwM29mNjQxbDdmOXozbyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Ta2eHM043vhVS/giphy.gif'
+        : 'https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExcnRqMmhncnk1M3Q4NmRxM3VkYXRkNmhvZzFsMXFpOTdmdGR4OHN6MSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/11tTNkNy1SdXGg/giphy.gif';
+
     return Scaffold(
         appBar: AppBar(
           title: Text(
@@ -48,7 +53,7 @@ class ResultPage extends StatelessWidget {
                           child: ClipRRect(
                             borderRadius: BorderRadius.circular(14),
                             child: Image.network(
-                              'https://images.unsplash.com/photo-1531327431456-837da4b1d562?q=80&w=928&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+                              imageUrl,
                               fit: BoxFit.cover,
                               loadingBuilder:
                                   (context, child, loadingProgress) {
