@@ -8,7 +8,7 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: const Text(
+          title: Text(
             "The extreme quiz",
             style: TextStyle(
               color: Colors.white,
@@ -23,14 +23,14 @@ class HomePage extends StatelessWidget {
         ),
         body: Center(
             child: Padding(
-          padding: const EdgeInsets.all(32.0),
+          padding: EdgeInsets.all(32.0),
           child: Column(
             mainAxisSize: MainAxisSize.max,
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Card(
                   child: Padding(
-                padding: const EdgeInsets.all(16.0),
+                padding: EdgeInsets.all(16.0),
                 child: Column(
                   children: [
                     Image.network(
