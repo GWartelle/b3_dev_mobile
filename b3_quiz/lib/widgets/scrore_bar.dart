@@ -36,7 +36,7 @@ class ScoreBar extends StatelessWidget implements PreferredSizeWidget {
       ),
       toolbarHeight: 50.0,
       centerTitle: true,
-      elevation: 3,
+      elevation: 4,
       backgroundColor: Colors.blue,
       shadowColor: Colors.blue,
     );
