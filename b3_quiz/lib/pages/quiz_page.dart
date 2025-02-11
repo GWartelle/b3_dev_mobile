@@ -7,8 +7,6 @@ import 'package:b3_quiz/widgets/scrore_bar.dart';
 import 'package:flutter/material.dart';
 
 class QuizPage extends StatefulWidget {
-  const QuizPage({super.key});
-
   @override
   QuizPageState createState() => QuizPageState();
 }
