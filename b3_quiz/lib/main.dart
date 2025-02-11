@@ -10,10 +10,6 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(initialRoute: '/', routes: {
-      '/': (context) => HomePage(),
-      // '/question': (context) => QuestionPage(),
-      // '/results': (context) => ResultsPage()
-    });
+    return const MaterialApp(title: 'The extreme quiz!', home: HomePage());
   }
 }

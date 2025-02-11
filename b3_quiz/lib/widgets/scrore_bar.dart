@@ -6,11 +6,11 @@ class ScoreBar extends StatelessWidget implements PreferredSizeWidget {
   final int totalQuestions;
 
   const ScoreBar({
-    Key? key,
+    super.key,
     required this.currentScore,
     required this.currentQuestionIndex,
     required this.totalQuestions,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

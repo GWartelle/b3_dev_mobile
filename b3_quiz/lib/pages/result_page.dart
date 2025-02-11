@@ -6,10 +6,10 @@ class ResultPage extends StatelessWidget {
   final int totalQuestions;
 
   const ResultPage({
-    Key? key,
+    super.key,
     required this.finalScore,
     required this.totalQuestions,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -42,16 +42,42 @@ class ResultPage extends StatelessWidget {
                   padding: EdgeInsets.all(16.0),
                   child: Column(
                     children: [
-                      Image.network(
-                          'https://images.unsplash.com/photo-1531327431456-837da4b1d562?q=80&w=928&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'),
+                      SizedBox(
+                          height: 300,
+                          width: double.infinity,
+                          child: ClipRRect(
+                            borderRadius: BorderRadius.circular(14),
+                            child: Image.network(
+                              'https://images.unsplash.com/photo-1531327431456-837da4b1d562?q=80&w=928&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+                              fit: BoxFit.cover,
+                              loadingBuilder:
+                                  (context, child, loadingProgress) {
+                                if (loadingProgress == null) return child;
+                                return Center(
+                                  child: CircularProgressIndicator(
+                                    value: loadingProgress.expectedTotalBytes !=
+                                            null
+                                        ? loadingProgress
+                                                .cumulativeBytesLoaded /
+                                            (loadingProgress
+                                                    .expectedTotalBytes ??
+                                                1)
+                                        : null,
+                                  ),
+                                );
+                              },
+                            ),
+                          )),
+                      const SizedBox(height: 16),
                       Text(
-                        "You're total score is $finalScore/$totalQuestions",
+                        "Your total score is $finalScore/$totalQuestions",
                         style: TextStyle(
                           fontWeight: FontWeight.bold,
                           fontSize: 20,
                         ),
                         textAlign: TextAlign.center,
                       ),
+                      const SizedBox(height: 16),
                       ElevatedButton(
                         style: ElevatedButton.styleFrom(
                             elevation: 4,
@@ -72,7 +98,8 @@ class ResultPage extends StatelessWidget {
                             fontSize: 16,
                           ),
                         ),
-                      )
+                      ),
+                      const SizedBox(height: 16),
                     ],
                   ),
                 ),

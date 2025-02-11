@@ -35,8 +35,33 @@ class HomePage extends StatelessWidget {
                   padding: EdgeInsets.all(16.0),
                   child: Column(
                     children: [
-                      Image.network(
-                          'https://images.unsplash.com/photo-1517258307935-9764dad5d7de?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'),
+                      SizedBox(
+                          height: 300,
+                          width: double.infinity,
+                          child: ClipRRect(
+                            borderRadius: BorderRadius.circular(14),
+                            child: Image.network(
+                              'https://images.unsplash.com/photo-1517258307935-9764dad5d7de?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+                              fit: BoxFit.cover,
+                              loadingBuilder:
+                                  (context, child, loadingProgress) {
+                                if (loadingProgress == null) return child;
+                                return Center(
+                                  child: CircularProgressIndicator(
+                                    value: loadingProgress.expectedTotalBytes !=
+                                            null
+                                        ? loadingProgress
+                                                .cumulativeBytesLoaded /
+                                            (loadingProgress
+                                                    .expectedTotalBytes ??
+                                                1)
+                                        : null,
+                                  ),
+                                );
+                              },
+                            ),
+                          )),
+                      const SizedBox(height: 16),
                       Text(
                         "Are you ready to take on a challenge?!",
                         style: TextStyle(
@@ -45,6 +70,7 @@ class HomePage extends StatelessWidget {
                         ),
                         textAlign: TextAlign.center,
                       ),
+                      const SizedBox(height: 16),
                       ElevatedButton(
                         style: ElevatedButton.styleFrom(
                             elevation: 4,
@@ -65,7 +91,8 @@ class HomePage extends StatelessWidget {
                             fontSize: 16,
                           ),
                         ),
-                      )
+                      ),
+                      const SizedBox(height: 16),
                     ],
                   ),
                 ),
