@@ -9,9 +9,9 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
       title: const Text(
         "Profile page",
         style: TextStyle(
-          color: Colors.white, // Change text color to white
-          fontWeight: FontWeight.bold, // Make text bold
-          fontSize: 20, // Optional: Adjust font size
+          color: Colors.white,
+          fontWeight: FontWeight.bold,
+          fontSize: 20,
         ),
       ),
       centerTitle: true,
